@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-fade {
+    animation: fadeIn 0.4s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+.input {
+  @apply w-full border p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400;
+}
+.input {
+  @apply w-full border p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400;
+}
