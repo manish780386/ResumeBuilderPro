@@ -14,6 +14,10 @@ import Template2ProfessionalGray from "./pages/Template2ProfessionalGray";
 import Template3CreativeOrange from "./pages/Template3CreativeOrange";
 import Template4MinimalWhite from "./pages/Template4MinimalWhite";
 import Template5CorporateBlack from "./pages/Template5CorporateBlack";
+import TemplateElegantPurple from "./pages/TemplateElegantPurple";
+import Template7ATSClean from "./pages/Template7ATSClean";
+import Template8SimpleClassic from "./pages/Template8SimpleClassic";
+import Template9BoldDesigner from "./pages/Template9BoldDesigner";
 import History from "./pages/History";
 
 
@@ -49,6 +53,10 @@ export default function App() {
         <Route path="/builder/template/3" element={<Template3CreativeOrange />} />
         <Route path="/builder/template/4" element={<Template4MinimalWhite />} />
         <Route path="/builder/template/5" element={<Template5CorporateBlack />} />
+        <Route path="/builder/template/6" element={<TemplateElegantPurple />} />
+        <Route path="/builder/template/7" element={<Template7ATSClean />} />
+        <Route path="/builder/template/8" element={<Template8SimpleClassic />} />
+        <Route path="/builder/template/9" element={<Template9BoldDesigner />} />
 
         <Route path="/history" element={<History />} />
 
