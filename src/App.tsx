@@ -19,6 +19,7 @@ import Template7ATSClean from "./pages/Template7ATSClean";
 import Template8SimpleClassic from "./pages/Template8SimpleClassic";
 import Template9BoldDesigner from "./pages/Template9BoldDesigner";
 import Template10FreshGreen from "./pages/Template10FreshGreen";
+import Template17ColorPop from "./pages/Template17ColorPop";
 import History from "./pages/History";
 
 
@@ -59,6 +60,7 @@ export default function App() {
         <Route path="/builder/template/8" element={<Template8SimpleClassic />} />
         <Route path="/builder/template/9" element={<Template9BoldDesigner />} />
         <Route path="/builder/template/10" element={<Template10FreshGreen />} />
+        <Route path="/builder/template/17" element={<Template17ColorPop />} />
 
         <Route path="/history" element={<History />} />
 

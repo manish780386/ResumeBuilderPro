@@ -26,7 +26,7 @@ export default function TemplateBuilder() {
         <div className="bg-white p-6 rounded-xl shadow">
           <h2 className="text-xl font-bold mb-4">Live Preview</h2>
           <p className="text-gray-500">
-            Template {id} preview yaha dikhega
+            Template {id} 
           </p>
         </div>
 
