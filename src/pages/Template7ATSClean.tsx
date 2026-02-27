@@ -44,7 +44,6 @@ export default function TemplateATSClean() {
     if (file) setPhoto(URL.createObjectURL(file));
   };
 
-  // ✅ PDF + HISTORY
   const downloadPDF = async () => {
     if (!resumeRef.current) return;
 
@@ -74,13 +73,11 @@ export default function TemplateATSClean() {
 
   return (
     <div style={{ background: "#f3f4f6", minHeight: "100vh", padding: 20 }}>
-
       <h1 style={{ textAlign: "center", marginBottom: 20 }}>
         Resume Builder – ATS Clean
       </h1>
 
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
-
         {/* ========= FORM ========= */}
         <div style={{ background: "white", padding: 20, borderRadius: 10 }}>
           <h2>Edit Resume</h2>
@@ -98,7 +95,7 @@ export default function TemplateATSClean() {
                 padding: 8,
                 marginTop: 8,
                 borderRadius: 5,
-                border: "1px solid #ccc"
+                border: "1px solid #ccc",
               }}
             />
           ))}
@@ -113,7 +110,7 @@ export default function TemplateATSClean() {
               width: "100%",
               borderRadius: 6,
               border: "none",
-              cursor: "pointer"
+              cursor: "pointer",
             }}
           >
             Download PDF
@@ -129,9 +126,22 @@ export default function TemplateATSClean() {
               height: "297mm",
               background: "white",
               padding: 40,
-              fontFamily: "Arial"
+              fontFamily: "Arial",
             }}
           >
+            {/* ✅ PHOTO USED (Error Fix) */}
+            {photo && (
+              <img
+                src={photo}
+                alt="Profile"
+                style={{
+                  width: 120,
+                  height: 120,
+                  borderRadius: "50%",
+                  marginBottom: 15,
+                }}
+              />
+            )}
 
             <h1 style={{ fontSize: 28 }}>{data.name}</h1>
             <p>{data.role}</p>
@@ -167,15 +177,19 @@ export default function TemplateATSClean() {
 
       {/* ========= HISTORY ========= */}
       {history.length > 0 && (
-        <div style={{
-          background: "white",
-          padding: 20,
-          marginTop: 20,
-          borderRadius: 10
-        }}>
+        <div
+          style={{
+            background: "white",
+            padding: 20,
+            marginTop: 20,
+            borderRadius: 10,
+          }}
+        >
           <h2>Download History</h2>
           {history.map((h, i) => (
-            <p key={i}>📄 {h.file} — {h.date}</p>
+            <p key={i}>
+              📄 {h.file} — {h.date}
+            </p>
           ))}
         </div>
       )}

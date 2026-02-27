@@ -1,4 +1,5 @@
-import React, { useState, ChangeEvent } from "react";
+import React, { useState } from "react";
+import type { ChangeEvent } from "react";
 
 const ATSChecker: React.FC = () => {
   const [fileName, setFileName] = useState<string>("");
@@ -17,7 +18,6 @@ const ATSChecker: React.FC = () => {
       return;
     }
 
-    // Fake ATS Score (backend baad me)
     const randomScore = Math.floor(Math.random() * 40) + 60;
     setScore(randomScore);
   };
@@ -25,12 +25,10 @@ const ATSChecker: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center p-6">
       <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-xl">
-
         <h1 className="text-3xl font-bold text-center mb-6">
           📄 ATS Resume Checker
         </h1>
 
-        {/* Upload Resume */}
         <div className="mb-4">
           <label className="font-semibold">Upload Resume (PDF)</label>
           <input
@@ -44,7 +42,6 @@ const ATSChecker: React.FC = () => {
           )}
         </div>
 
-        {/* Skills */}
         <div className="mb-4">
           <label className="font-semibold">
             Enter Job Skills (comma separated)
@@ -57,7 +54,6 @@ const ATSChecker: React.FC = () => {
           />
         </div>
 
-        {/* Button */}
         <button
           onClick={checkATS}
           className="w-full bg-blue-600 text-white p-3 rounded-xl hover:bg-blue-700 transition"
@@ -65,7 +61,6 @@ const ATSChecker: React.FC = () => {
           Check ATS Score
         </button>
 
-        {/* Result */}
         {score !== null && (
           <div className="mt-6 text-center">
             <h2 className="text-2xl font-bold">Your ATS Score</h2>
